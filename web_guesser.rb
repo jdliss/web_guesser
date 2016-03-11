@@ -3,7 +3,8 @@ require 'sinatra/reloader'
 
 set :port, 9292
 
-num = rand(100)
+number = rand(100)
+
 get '/' do
-  "The SECRET NUMBER IS #{num}"
+  erb :index, :locals => {:number => number}
 end
