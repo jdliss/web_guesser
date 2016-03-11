@@ -1,6 +1,9 @@
 require 'sinatra'
+require 'sinatra/reloader'
 
 set :port, 9292
+
+num = rand(100)
 get '/' do
-  "Hello, World!"
+  "The SECRET NUMBER IS #{num}"
 end
